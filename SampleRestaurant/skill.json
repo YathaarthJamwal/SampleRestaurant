@@ -1,0 +1,19 @@
+{
+  "manifest": {
+    "apis": {
+      "custom": {
+        "endpoint": {
+          "uri": "arn:aws:lambda:us-east-1:242094983410:function:dc8a9e12-c4c9-47b4-a25b-28dcd2227769:Release_0"
+        },
+        "interfaces": []
+      }
+    },
+    "publishingInformation": {
+      "locales": {
+        "en-GB": {
+          "name": "SampleRestaurant"
+        }
+      }
+    }
+  }
+}

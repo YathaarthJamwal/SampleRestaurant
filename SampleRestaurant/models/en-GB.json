@@ -1,0 +1,91 @@
+{
+  "interactionModel": {
+    "languageModel": {
+      "invocationName": "samplerestaurant",
+      "intents": [
+        {
+          "name": "AMAZON.CancelIntent",
+          "samples": []
+        },
+        {
+          "name": "AMAZON.HelpIntent",
+          "samples": []
+        },
+        {
+          "name": "AMAZON.StopIntent",
+          "samples": []
+        },
+        {
+          "name": "MenuIntent",
+          "slots": [],
+          "samples": [
+            "available items",
+            "items",
+            "restaurant menu",
+            "menu"
+          ]
+        },
+        {
+          "name": "AMAZON.NavigateHomeIntent",
+          "samples": []
+        },
+        {
+          "name": "OrderIntent",
+          "slots": [
+            {
+              "name": "ItemNameSlot",
+              "type": "AMAZON.Food"
+            },
+            {
+              "name": "ItemQuantitySlot",
+              "type": "AMAZON.NUMBER"
+            }
+          ],
+          "samples": [
+            "order {ItemQuantitySlot} {ItemNameSlot}",
+            "order an {ItemNameSlot} ",
+            "order a {ItemNameSlot}"
+          ]
+        },
+        {
+          "name": "BillIntent",
+          "slots": [],
+          "samples": [
+            "bill amount",
+            "i want the bill",
+            "give me the cheque",
+            "tell the bill",
+            "give me the bill",
+            "show me the bill"
+          ]
+        }
+      ],
+      "types": []
+    },
+    "dialog": {
+      "intents": [
+        {
+          "name": "BillIntent",
+          "confirmationRequired": true,
+          "prompts": {
+            "confirmation": "Confirm.Intent.47443702714"
+          },
+          "slots": []
+        }
+      ],
+      "delegationStrategy": "ALWAYS"
+    },
+    "prompts": [
+      {
+        "id": "Confirm.Intent.47443702714",
+        "variations": [
+          {
+            "type": "PlainText",
+            "value": "Can you confirm again that you want the bill?"
+          }
+        ]
+      }
+    ]
+  },
+  "version": "2"
+}
